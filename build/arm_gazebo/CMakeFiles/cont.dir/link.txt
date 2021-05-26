@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/cont.dir/src/controller.cpp.o  -o /home/ubuntu/projects/gazebo/arm_ws/devel/lib/arm_gazebo/cont   -L/usr/lib/x86_64-linux-gnu/gazebo-11/plugins 

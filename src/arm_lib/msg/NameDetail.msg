@@ -1,0 +1,29 @@
+string firstName
+    string lastName
+        uint8 count
+
+            float32 x
+                float32 y
+                    float32 z
+                        float32 alpha
+                            float32 beta
+                                float32 gamma
+                                    float32 newXX
+                                        float32 newXY
+                                            float32 newXZ
+                                                float32 newYX
+                                                    float32 newYY
+                                                        float32 newYZ
+                                                            float32 newZX
+                                                                float32 newZY
+                                                                    float32 newZZ
+                                                                        float32 distance
+                                                                            float32 finalVectorX1
+                                                                                float32 finalVectorX2
+                                                                                    float32 finalVectorX3
+                                                                                        float32 finalVectorY1
+                                                                                            float32 finalVectorY2
+                                                                                                float32 finalVectorY3
+                                                                                                    float32 finalVectorZ1
+                                                                                                        float32 finalVectorZ2
+                                                                                                            float32 finalVectorZ3
