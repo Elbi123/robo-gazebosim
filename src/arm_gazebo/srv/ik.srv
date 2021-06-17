@@ -1,0 +1,3 @@
+float64[] actuatorPose
+---
+float64[] jointAngles

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "arm_gazebo: 1 messages, 0 services")
+message(STATUS "arm_gazebo: 1 messages, 2 services")
 
 set(MSG_I_FLAGS "-Iarm_gazebo:/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,16 @@ add_custom_target(_arm_gazebo_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm_gazebo" "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg/JointAngles.msg" ""
 )
 
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv" NAME_WE)
+add_custom_target(_arm_gazebo_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm_gazebo" "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv" ""
+)
+
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv" NAME_WE)
+add_custom_target(_arm_gazebo_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "arm_gazebo" "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -36,6 +46,18 @@ _generate_msg_cpp(arm_gazebo
 )
 
 ### Generating Services
+_generate_srv_cpp(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm_gazebo
+)
+_generate_srv_cpp(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/arm_gazebo
+)
 
 ### Generating Module File
 _generate_module_cpp(arm_gazebo
@@ -50,6 +72,10 @@ add_dependencies(arm_gazebo_generate_messages arm_gazebo_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg/JointAngles.msg" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_cpp _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_cpp _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv" NAME_WE)
 add_dependencies(arm_gazebo_generate_messages_cpp _arm_gazebo_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -69,6 +95,18 @@ _generate_msg_eus(arm_gazebo
 )
 
 ### Generating Services
+_generate_srv_eus(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm_gazebo
+)
+_generate_srv_eus(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/arm_gazebo
+)
 
 ### Generating Module File
 _generate_module_eus(arm_gazebo
@@ -83,6 +121,10 @@ add_dependencies(arm_gazebo_generate_messages arm_gazebo_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg/JointAngles.msg" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_eus _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_eus _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv" NAME_WE)
 add_dependencies(arm_gazebo_generate_messages_eus _arm_gazebo_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -102,6 +144,18 @@ _generate_msg_lisp(arm_gazebo
 )
 
 ### Generating Services
+_generate_srv_lisp(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm_gazebo
+)
+_generate_srv_lisp(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/arm_gazebo
+)
 
 ### Generating Module File
 _generate_module_lisp(arm_gazebo
@@ -116,6 +170,10 @@ add_dependencies(arm_gazebo_generate_messages arm_gazebo_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg/JointAngles.msg" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_lisp _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_lisp _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv" NAME_WE)
 add_dependencies(arm_gazebo_generate_messages_lisp _arm_gazebo_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -135,6 +193,18 @@ _generate_msg_nodejs(arm_gazebo
 )
 
 ### Generating Services
+_generate_srv_nodejs(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm_gazebo
+)
+_generate_srv_nodejs(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/arm_gazebo
+)
 
 ### Generating Module File
 _generate_module_nodejs(arm_gazebo
@@ -149,6 +219,10 @@ add_dependencies(arm_gazebo_generate_messages arm_gazebo_generate_messages_nodej
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg/JointAngles.msg" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_nodejs _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_nodejs _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv" NAME_WE)
 add_dependencies(arm_gazebo_generate_messages_nodejs _arm_gazebo_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -168,6 +242,18 @@ _generate_msg_py(arm_gazebo
 )
 
 ### Generating Services
+_generate_srv_py(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm_gazebo
+)
+_generate_srv_py(arm_gazebo
+  "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/arm_gazebo
+)
 
 ### Generating Module File
 _generate_module_py(arm_gazebo
@@ -182,6 +268,10 @@ add_dependencies(arm_gazebo_generate_messages arm_gazebo_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg/JointAngles.msg" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_py _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv" NAME_WE)
+add_dependencies(arm_gazebo_generate_messages_py _arm_gazebo_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv" NAME_WE)
 add_dependencies(arm_gazebo_generate_messages_py _arm_gazebo_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

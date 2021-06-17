@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg/JointAngles.msg"
-services_str = ""
+services_str = "/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv;/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv"
 pkg_name = "arm_gazebo"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

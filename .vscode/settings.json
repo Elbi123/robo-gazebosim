@@ -70,5 +70,13 @@
     "typeinfo": "cpp",
     "variant": "cpp",
     "bit": "cpp"
-  }
+  },
+  "python.autoComplete.extraPaths": [
+    "/home/ubuntu/projects/gazebo/arm_ws/devel/lib/python3/dist-packages",
+    "/opt/ros/noetic/lib/python3/dist-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/ubuntu/projects/gazebo/arm_ws/devel/lib/python3/dist-packages",
+    "/opt/ros/noetic/lib/python3/dist-packages"
+  ]
 }

@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/ubuntu/projects/gazebo/arm_ws/build
 include arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/progress.make
 
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp: /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/JointAngles.h
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp: /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/fk.h
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp: /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/ik.h
 
 
 /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/JointAngles.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -62,8 +64,24 @@ arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp: /home/ubuntu/projects/ga
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/projects/gazebo/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from arm_gazebo/JointAngles.msg"
 	cd /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo && /home/ubuntu/projects/gazebo/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg/JointAngles.msg -Iarm_gazebo:/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/fk.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/fk.h: /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv
+/home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/fk.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/fk.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/projects/gazebo/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from arm_gazebo/fk.srv"
+	cd /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo && /home/ubuntu/projects/gazebo/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv -Iarm_gazebo:/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/ik.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/ik.h: /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv
+/home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/ik.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/ik.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/projects/gazebo/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from arm_gazebo/ik.srv"
+	cd /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo && /home/ubuntu/projects/gazebo/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv -Iarm_gazebo:/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo -e /opt/ros/noetic/share/gencpp/cmake/..
+
 arm_gazebo_generate_messages_cpp: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp
 arm_gazebo_generate_messages_cpp: /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/JointAngles.h
+arm_gazebo_generate_messages_cpp: /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/fk.h
+arm_gazebo_generate_messages_cpp: /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/ik.h
 arm_gazebo_generate_messages_cpp: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build.make
 
 .PHONY : arm_gazebo_generate_messages_cpp

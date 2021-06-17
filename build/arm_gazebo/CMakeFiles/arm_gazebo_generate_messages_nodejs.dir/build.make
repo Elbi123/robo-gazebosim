@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/ubuntu/projects/gazebo/arm_ws/build
 include arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/progress.make
 
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs: /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/JointAngles.js
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs: /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs: /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js
 
 
 /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/JointAngles.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +63,20 @@ arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs: /home/ubuntu/projects
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/projects/gazebo/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from arm_gazebo/JointAngles.msg"
 	cd /home/ubuntu/projects/gazebo/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg/JointAngles.msg -Iarm_gazebo:/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg
 
+/home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js: /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/projects/gazebo/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from arm_gazebo/fk.srv"
+	cd /home/ubuntu/projects/gazebo/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/fk.srv -Iarm_gazebo:/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv
+
+/home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js: /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/projects/gazebo/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from arm_gazebo/ik.srv"
+	cd /home/ubuntu/projects/gazebo/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/srv/ik.srv -Iarm_gazebo:/home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv
+
 arm_gazebo_generate_messages_nodejs: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs
 arm_gazebo_generate_messages_nodejs: /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/JointAngles.js
+arm_gazebo_generate_messages_nodejs: /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js
+arm_gazebo_generate_messages_nodejs: /home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js
 arm_gazebo_generate_messages_nodejs: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/build.make
 
 .PHONY : arm_gazebo_generate_messages_nodejs

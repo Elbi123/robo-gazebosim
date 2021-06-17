@@ -25,9 +25,17 @@ namespace gazebo
       this->model = _model;
       // this->pid = common::PID(12.4, 25.2, 10.5);
       this->jointController = this->model->GetJointController();
-
+      this->pid = common::PID(20.0, 10.0, 10.00);
+      this->pid2 = common::PID(20.0, 10.0, 10.00);
+      this->pid3 = common::PID(20.0, 10.0, 10.00);
+      std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
+      std::string name2 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
+      std::string name3 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
+      this->jointController->SetPositionPID(name, pid);
+      this->jointController->SetPositionPID(name2, pid2);
+      this->jointController->SetPositionPID(name3, pid3);
       // CREATE THE TOPIC
-      const std::string topicName = "~/" + this->model->GetName() + "/vel_cmd";
+      // const std::string topicName = "~/" + this->model->GetName() + "/vel_cmd";
       if (!ros::isInitialized())
       {
         int argc = 0;
@@ -35,6 +43,7 @@ namespace gazebo
         ros::init(argc, argv, "gazebo_client", ros::init_options::NoSigintHandler);
       }
 
+      // Node will be created this way
       this->rosNode.reset(new ros::NodeHandle("gazebo_client"));
 
       // ros::NodeHandle n;
@@ -109,6 +118,15 @@ namespace gazebo
 
   private:
     event::ConnectionPtr updateConnection;
+
+  private:
+    common::PID pid;
+
+  private:
+    common::PID pid2;
+
+  private:
+    common::PID pid3;
   };
   // Tell Gazebo about this plugin, so that Gazebo can call Load on this plugin.
   GZ_REGISTER_MODEL_PLUGIN(ProgrammablePID)

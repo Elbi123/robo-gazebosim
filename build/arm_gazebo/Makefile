@@ -243,6 +243,21 @@ arm_gazebo_geneus/fast:
 .PHONY : arm_gazebo_geneus/fast
 
 # Convenience name for target.
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+arm_gazebo_generate_messages_eus: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule
+
+.PHONY : arm_gazebo_generate_messages_eus
+
+# fast build rule for target.
+arm_gazebo_generate_messages_eus/fast:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build
+.PHONY : arm_gazebo_generate_messages_eus/fast
+
+# Convenience name for target.
 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
 	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
@@ -603,19 +618,19 @@ tf_generate_messages_lisp/fast:
 .PHONY : tf_generate_messages_lisp/fast
 
 # Convenience name for target.
-arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+arm_gazebo_gencpp: arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_cpp
+.PHONY : arm_gazebo_gencpp
 
 # fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
+arm_gazebo_gencpp/fast:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build
+.PHONY : arm_gazebo_gencpp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
@@ -631,21 +646,6 @@ dynamic_reconfigure_generate_messages_cpp: arm_gazebo/CMakeFiles/dynamic_reconfi
 dynamic_reconfigure_generate_messages_cpp/fast:
 	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
-.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
-
-# Convenience name for target.
-arm_gazebo_gencpp: arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
-
-.PHONY : arm_gazebo_gencpp
-
-# fast build rule for target.
-arm_gazebo_gencpp/fast:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build
-.PHONY : arm_gazebo_gencpp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/actionlib_generate_messages_py.dir/rule:
@@ -766,36 +766,6 @@ std_srvs_generate_messages_lisp: arm_gazebo/CMakeFiles/std_srvs_generate_message
 std_srvs_generate_messages_lisp/fast:
 	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 .PHONY : std_srvs_generate_messages_lisp/fast
-
-# Convenience name for target.
-arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_cpp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-.PHONY : tf2_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
@@ -1143,19 +1113,79 @@ arm_gazebo_generate_messages/fast:
 .PHONY : arm_gazebo_generate_messages/fast
 
 # Convenience name for target.
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule
-.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule
+arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-arm_gazebo_generate_messages_eus: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule
+tf2_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : arm_gazebo_generate_messages_eus
+.PHONY : tf2_msgs_generate_messages_cpp
 
 # fast build rule for target.
-arm_gazebo_generate_messages_eus/fast:
-	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build
-.PHONY : arm_gazebo_generate_messages_eus/fast
+tf2_msgs_generate_messages_cpp/fast:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_lisp: arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/rule:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/rule
+
+# Convenience name for target.
+_arm_gazebo_generate_messages_check_deps_fk: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/rule
+
+.PHONY : _arm_gazebo_generate_messages_check_deps_fk
+
+# fast build rule for target.
+_arm_gazebo_generate_messages_check_deps_fk/fast:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/build
+.PHONY : _arm_gazebo_generate_messages_check_deps_fk/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule
+
+# Convenience name for target.
+_arm_gazebo_generate_messages_check_deps_ik: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule
+
+.PHONY : _arm_gazebo_generate_messages_check_deps_ik
+
+# fast build rule for target.
+_arm_gazebo_generate_messages_check_deps_ik/fast:
+	cd /home/ubuntu/projects/gazebo/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build
+.PHONY : _arm_gazebo_generate_messages_check_deps_ik/fast
 
 src/controller.o: src/controller.cpp.o
 
@@ -1228,6 +1258,7 @@ help:
 	@echo "... arm_gazebo_genlisp"
 	@echo "... arm_gazebo_generate_messages_lisp"
 	@echo "... arm_gazebo_geneus"
+	@echo "... arm_gazebo_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... gazebo_msgs_generate_messages_nodejs"
@@ -1253,9 +1284,8 @@ help:
 	@echo "... gazebo_ros_gencfg"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... tf_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... arm_gazebo_gencpp"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_lisp"
@@ -1264,8 +1294,6 @@ help:
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... show_joint_angles"
 	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... arm_gazebo_generate_messages_cpp"
@@ -1289,7 +1317,11 @@ help:
 	@echo "... controller"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... arm_gazebo_generate_messages"
-	@echo "... arm_gazebo_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... _arm_gazebo_generate_messages_check_deps_fk"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... _arm_gazebo_generate_messages_check_deps_ik"
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"

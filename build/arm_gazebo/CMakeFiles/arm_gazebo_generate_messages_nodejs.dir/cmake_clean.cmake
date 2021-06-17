@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "/home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/JointAngles.js"
+  "/home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js"
+  "/home/ubuntu/projects/gazebo/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js"
   "CMakeFiles/arm_gazebo_generate_messages_nodejs"
 )
 
