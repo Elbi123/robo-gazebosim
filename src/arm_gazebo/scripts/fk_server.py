@@ -22,7 +22,7 @@ def FKRequestHandler(req):
     return fkResponse(endEffector)
 
 
-def fk_server():
+def FKServerInit():
     rospy.init_node('fk_server')
     s = rospy.Service('FK_POSE', fk, FKRequestHandler)
     print("Checking here...")
@@ -84,7 +84,7 @@ def Tz(d):
 
 
 if __name__ == "__main__":
-    FKRequestHandler()
+    FKServerInit()
 
 
 # import cv2 as cv
