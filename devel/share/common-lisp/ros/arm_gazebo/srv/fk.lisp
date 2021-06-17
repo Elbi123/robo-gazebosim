@@ -12,9 +12,9 @@
     :initarg :jointAngles
     :type (cl:vector cl:float)
    :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0))
-   (linkAengths
-    :reader linkAengths
-    :initarg :linkAengths
+   (linkLengths
+    :reader linkLengths
+    :initarg :linkLengths
     :type (cl:vector cl:float)
    :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0)))
 )
@@ -32,10 +32,10 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arm_gazebo-srv:jointAngles-val is deprecated.  Use arm_gazebo-srv:jointAngles instead.")
   (jointAngles m))
 
-(cl:ensure-generic-function 'linkAengths-val :lambda-list '(m))
-(cl:defmethod linkAengths-val ((m <fk-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arm_gazebo-srv:linkAengths-val is deprecated.  Use arm_gazebo-srv:linkAengths instead.")
-  (linkAengths m))
+(cl:ensure-generic-function 'linkLengths-val :lambda-list '(m))
+(cl:defmethod linkLengths-val ((m <fk-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arm_gazebo-srv:linkLengths-val is deprecated.  Use arm_gazebo-srv:linkLengths instead.")
+  (linkLengths m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <fk-request>) ostream)
   "Serializes a message object of type '<fk-request>"
   (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'jointAngles))))
@@ -53,7 +53,7 @@
     (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream)))
    (cl:slot-value msg 'jointAngles))
-  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'linkAengths))))
+  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'linkLengths))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
@@ -67,7 +67,7 @@
     (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream)))
-   (cl:slot-value msg 'linkAengths))
+   (cl:slot-value msg 'linkLengths))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <fk-request>) istream)
   "Deserializes a message object of type '<fk-request>"
@@ -94,8 +94,8 @@
     (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 16) __ros_arr_len) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 24) __ros_arr_len) (cl:read-byte istream))
-  (cl:setf (cl:slot-value msg 'linkAengths) (cl:make-array __ros_arr_len))
-  (cl:let ((vals (cl:slot-value msg 'linkAengths)))
+  (cl:setf (cl:slot-value msg 'linkLengths) (cl:make-array __ros_arr_len))
+  (cl:let ((vals (cl:slot-value msg 'linkLengths)))
     (cl:dotimes (i __ros_arr_len)
     (cl:let ((bits 0))
       (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
@@ -117,26 +117,26 @@
   "arm_gazebo/fkRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<fk-request>)))
   "Returns md5sum for a message object of type '<fk-request>"
-  "983ceff1c2f2603605ab3cc1ed99a3a4")
+  "115d5d88f66df07c36ebc6ea903c1cfb")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'fk-request)))
   "Returns md5sum for a message object of type 'fk-request"
-  "983ceff1c2f2603605ab3cc1ed99a3a4")
+  "115d5d88f66df07c36ebc6ea903c1cfb")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<fk-request>)))
   "Returns full string definition for message of type '<fk-request>"
-  (cl:format cl:nil "~%float64[] jointAngles~%float64[] linkAengths~%~%~%"))
+  (cl:format cl:nil "~%float64[] jointAngles~%float64[] linkLengths~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'fk-request)))
   "Returns full string definition for message of type 'fk-request"
-  (cl:format cl:nil "~%float64[] jointAngles~%float64[] linkAengths~%~%~%"))
+  (cl:format cl:nil "~%float64[] jointAngles~%float64[] linkLengths~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <fk-request>))
   (cl:+ 0
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'jointAngles) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
-     4 (cl:reduce #'cl:+ (cl:slot-value msg 'linkAengths) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'linkLengths) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <fk-request>))
   "Converts a ROS message object to a list"
   (cl:list 'fk-request
     (cl:cons ':jointAngles (jointAngles msg))
-    (cl:cons ':linkAengths (linkAengths msg))
+    (cl:cons ':linkLengths (linkLengths msg))
 ))
 ;//! \htmlinclude fk-response.msg.html
 
@@ -208,10 +208,10 @@
   "arm_gazebo/fkResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<fk-response>)))
   "Returns md5sum for a message object of type '<fk-response>"
-  "983ceff1c2f2603605ab3cc1ed99a3a4")
+  "115d5d88f66df07c36ebc6ea903c1cfb")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'fk-response)))
   "Returns md5sum for a message object of type 'fk-response"
-  "983ceff1c2f2603605ab3cc1ed99a3a4")
+  "115d5d88f66df07c36ebc6ea903c1cfb")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<fk-response>)))
   "Returns full string definition for message of type '<fk-response>"
   (cl:format cl:nil "float64[] actuatorPose~%~%~%"))

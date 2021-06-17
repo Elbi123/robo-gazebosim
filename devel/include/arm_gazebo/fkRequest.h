@@ -25,11 +25,11 @@ struct fkRequest_
 
   fkRequest_()
     : jointAngles()
-    , linkAengths()  {
+    , linkLengths()  {
     }
   fkRequest_(const ContainerAllocator& _alloc)
     : jointAngles(_alloc)
-    , linkAengths(_alloc)  {
+    , linkLengths(_alloc)  {
   (void)_alloc;
     }
 
@@ -38,8 +38,8 @@ struct fkRequest_
    typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _jointAngles_type;
   _jointAngles_type jointAngles;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _linkAengths_type;
-  _linkAengths_type linkAengths;
+   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _linkLengths_type;
+  _linkLengths_type linkLengths;
 
 
 
@@ -71,7 +71,7 @@ template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::arm_gazebo::fkRequest_<ContainerAllocator1> & lhs, const ::arm_gazebo::fkRequest_<ContainerAllocator2> & rhs)
 {
   return lhs.jointAngles == rhs.jointAngles &&
-    lhs.linkAengths == rhs.linkAengths;
+    lhs.linkLengths == rhs.linkLengths;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -128,12 +128,12 @@ struct MD5Sum< ::arm_gazebo::fkRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "43298ecb5966ba4619f2e2482688a400";
+    return "e028ca2fc7a640215fdccd29272e5916";
   }
 
   static const char* value(const ::arm_gazebo::fkRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x43298ecb5966ba46ULL;
-  static const uint64_t static_value2 = 0x19f2e2482688a400ULL;
+  static const uint64_t static_value1 = 0xe028ca2fc7a64021ULL;
+  static const uint64_t static_value2 = 0x5fdccd29272e5916ULL;
 };
 
 template<class ContainerAllocator>
@@ -154,7 +154,7 @@ struct Definition< ::arm_gazebo::fkRequest_<ContainerAllocator> >
   {
     return "\n"
 "float64[] jointAngles\n"
-"float64[] linkAengths\n"
+"float64[] linkLengths\n"
 ;
   }
 
@@ -174,7 +174,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.jointAngles);
-      stream.next(m.linkAengths);
+      stream.next(m.linkLengths);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -199,11 +199,11 @@ struct Printer< ::arm_gazebo::fkRequest_<ContainerAllocator> >
       s << indent << "  jointAngles[" << i << "]: ";
       Printer<double>::stream(s, indent + "  ", v.jointAngles[i]);
     }
-    s << indent << "linkAengths[]" << std::endl;
-    for (size_t i = 0; i < v.linkAengths.size(); ++i)
+    s << indent << "linkLengths[]" << std::endl;
+    for (size_t i = 0; i < v.linkLengths.size(); ++i)
     {
-      s << indent << "  linkAengths[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.linkAengths[i]);
+      s << indent << "  linkLengths[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.linkLengths[i]);
     }
   }
 };

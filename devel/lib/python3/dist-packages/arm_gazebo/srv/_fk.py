@@ -8,14 +8,14 @@ import struct
 
 
 class fkRequest(genpy.Message):
-  _md5sum = "43298ecb5966ba4619f2e2482688a400"
+  _md5sum = "e028ca2fc7a640215fdccd29272e5916"
   _type = "arm_gazebo/fkRequest"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """
 float64[] jointAngles
-float64[] linkAengths
+float64[] linkLengths
 """
-  __slots__ = ['jointAngles','linkAengths']
+  __slots__ = ['jointAngles','linkLengths']
   _slot_types = ['float64[]','float64[]']
 
   def __init__(self, *args, **kwds):
@@ -26,7 +26,7 @@ float64[] linkAengths
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       jointAngles,linkAengths
+       jointAngles,linkLengths
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -37,11 +37,11 @@ float64[] linkAengths
       # message fields cannot be None, assign default values for those that are
       if self.jointAngles is None:
         self.jointAngles = []
-      if self.linkAengths is None:
-        self.linkAengths = []
+      if self.linkLengths is None:
+        self.linkLengths = []
     else:
       self.jointAngles = []
-      self.linkAengths = []
+      self.linkLengths = []
 
   def _get_types(self):
     """
@@ -59,10 +59,10 @@ float64[] linkAengths
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
       buff.write(struct.Struct(pattern).pack(*self.jointAngles))
-      length = len(self.linkAengths)
+      length = len(self.linkLengths)
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
-      buff.write(struct.Struct(pattern).pack(*self.linkAengths))
+      buff.write(struct.Struct(pattern).pack(*self.linkLengths))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -90,7 +90,7 @@ float64[] linkAengths
       start = end
       s = struct.Struct(pattern)
       end += s.size
-      self.linkAengths = s.unpack(str[start:end])
+      self.linkLengths = s.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -107,10 +107,10 @@ float64[] linkAengths
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
       buff.write(self.jointAngles.tostring())
-      length = len(self.linkAengths)
+      length = len(self.linkLengths)
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
-      buff.write(self.linkAengths.tostring())
+      buff.write(self.linkLengths.tostring())
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -139,7 +139,7 @@ float64[] linkAengths
       start = end
       s = struct.Struct(pattern)
       end += s.size
-      self.linkAengths = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=length)
+      self.linkLengths = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=length)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -271,6 +271,6 @@ def _get_struct_I():
     return _struct_I
 class fk(object):
   _type          = 'arm_gazebo/fk'
-  _md5sum = '983ceff1c2f2603605ab3cc1ed99a3a4'
+  _md5sum = '115d5d88f66df07c36ebc6ea903c1cfb'
   _request_class  = fkRequest
   _response_class = fkResponse

@@ -22,7 +22,7 @@ class fkRequest {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.jointAngles = null;
-      this.linkAengths = null;
+      this.linkLengths = null;
     }
     else {
       if (initObj.hasOwnProperty('jointAngles')) {
@@ -31,11 +31,11 @@ class fkRequest {
       else {
         this.jointAngles = [];
       }
-      if (initObj.hasOwnProperty('linkAengths')) {
-        this.linkAengths = initObj.linkAengths
+      if (initObj.hasOwnProperty('linkLengths')) {
+        this.linkLengths = initObj.linkLengths
       }
       else {
-        this.linkAengths = [];
+        this.linkLengths = [];
       }
     }
   }
@@ -44,8 +44,8 @@ class fkRequest {
     // Serializes a message object of type fkRequest
     // Serialize message field [jointAngles]
     bufferOffset = _arraySerializer.float64(obj.jointAngles, buffer, bufferOffset, null);
-    // Serialize message field [linkAengths]
-    bufferOffset = _arraySerializer.float64(obj.linkAengths, buffer, bufferOffset, null);
+    // Serialize message field [linkLengths]
+    bufferOffset = _arraySerializer.float64(obj.linkLengths, buffer, bufferOffset, null);
     return bufferOffset;
   }
 
@@ -55,15 +55,15 @@ class fkRequest {
     let data = new fkRequest(null);
     // Deserialize message field [jointAngles]
     data.jointAngles = _arrayDeserializer.float64(buffer, bufferOffset, null)
-    // Deserialize message field [linkAengths]
-    data.linkAengths = _arrayDeserializer.float64(buffer, bufferOffset, null)
+    // Deserialize message field [linkLengths]
+    data.linkLengths = _arrayDeserializer.float64(buffer, bufferOffset, null)
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
     length += 8 * object.jointAngles.length;
-    length += 8 * object.linkAengths.length;
+    length += 8 * object.linkLengths.length;
     return length + 8;
   }
 
@@ -74,7 +74,7 @@ class fkRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '43298ecb5966ba4619f2e2482688a400';
+    return 'e028ca2fc7a640215fdccd29272e5916';
   }
 
   static messageDefinition() {
@@ -82,7 +82,7 @@ class fkRequest {
     return `
     
     float64[] jointAngles
-    float64[] linkAengths
+    float64[] linkLengths
     
     `;
   }
@@ -100,11 +100,11 @@ class fkRequest {
       resolved.jointAngles = []
     }
 
-    if (msg.linkAengths !== undefined) {
-      resolved.linkAengths = msg.linkAengths;
+    if (msg.linkLengths !== undefined) {
+      resolved.linkLengths = msg.linkLengths;
     }
     else {
-      resolved.linkAengths = []
+      resolved.linkLengths = []
     }
 
     return resolved;
@@ -187,6 +187,6 @@ class fkResponse {
 module.exports = {
   Request: fkRequest,
   Response: fkResponse,
-  md5sum() { return '983ceff1c2f2603605ab3cc1ed99a3a4'; },
+  md5sum() { return '115d5d88f66df07c36ebc6ea903c1cfb'; },
   datatype() { return 'arm_gazebo/fk'; }
 };

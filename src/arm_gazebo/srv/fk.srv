@@ -1,5 +1,5 @@
 
 float64[] jointAngles
-float64[] linkAengths
+float64[] linkLengths
 ---
 float64[] actuatorPose
