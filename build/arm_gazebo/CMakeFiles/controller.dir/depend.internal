@@ -3,6 +3,12 @@
 
 arm_gazebo/CMakeFiles/controller.dir/src/controller.cpp.o
  /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/JointAngles.h
+ /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/fk.h
+ /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/fkRequest.h
+ /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/fkResponse.h
+ /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/ik.h
+ /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/ikRequest.h
+ /home/ubuntu/projects/gazebo/arm_ws/devel/include/arm_gazebo/ikResponse.h
  /home/ubuntu/projects/gazebo/arm_ws/src/arm_gazebo/src/controller.cpp
  /opt/ros/noetic/include/ros/advertise_options.h
  /opt/ros/noetic/include/ros/advertise_service_options.h

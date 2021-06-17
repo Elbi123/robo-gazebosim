@@ -25,9 +25,9 @@ namespace gazebo
       this->model = _model;
       // this->pid = common::PID(12.4, 25.2, 10.5);
       this->jointController = this->model->GetJointController();
-      this->pid = common::PID(20.0, 10.0, 10.00);
-      this->pid2 = common::PID(20.0, 10.0, 10.00);
-      this->pid3 = common::PID(20.0, 10.0, 10.00);
+      this->pid = common::PID(z, 10.01, 10.03);
+      this->pid2 = common::PID(25.9, 10.4, 5.04);
+      this->pid3 = common::PID(40.9, 20.4, 10.04);
       std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
       std::string name2 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
       std::string name3 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();

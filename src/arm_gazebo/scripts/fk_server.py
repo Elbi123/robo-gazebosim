@@ -18,13 +18,13 @@ def FKRequestHandler(req):
 
     endEffector = np.array([M7[0][3], M7[1][3], M7[2][3]])
 
-    print("Returning: ", endEffector)
+    print("END EFFECTOR POSE: ", endEffector)
     return fkResponse(endEffector)
 
 
 def FKServerInit():
-    rospy.init_node('fk_server')
-    s = rospy.Service('FK_POSE', fk, FKRequestHandler)
+    rospy.init_node('fk_server_init')
+    s = rospy.Service('POSE', fk, FKRequestHandler)
     print("Checking here...")
     rospy.spin()
 
